@@ -1,0 +1,45 @@
+<%= form_for([:admin, @segment]) do |f| %>
+  <% if @segment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@segment.errors.count, "error") %> prohibited this segment from being saved:</h2>
+
+      <ul>
+      <% @segment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+      <%= f.label :name %><br>
+    <%= f.text_field :name %>
+    </div>
+  <div class="field">
+      <%= f.label :geofenceCount %><br>
+    <%= f.number_field :geofenceCount %>
+    </div>
+  <div class="field">
+      <%= f.label :counquestCount %><br>
+    <%= f.number_field :counquestCount %>
+    </div>
+  <div class="field">
+      <%= f.label :location %><br>
+    <%= f.text_field :location %>
+    </div>
+  <div class="field">
+      <%= f.label :dma %><br>
+    <%= f.text_field :dma %>
+    </div>
+  <div class="field">
+      <%= f.label :deviceCount %><br>
+    <%= f.number_field :deviceCount %>
+    </div>
+  <div class="field">
+      <%= f.label :imageFilepath %><br>
+    <%= f.text_field :imageFilepath %>
+    </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

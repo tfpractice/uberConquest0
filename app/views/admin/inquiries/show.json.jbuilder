@@ -1,0 +1,1 @@
+json.extract! @inquiry, :email, :suggested, :created_at, :updated_at

@@ -11,10 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140716171215) do
+ActiveRecord::Schema.define(version: 20140716175547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.boolean  "featured"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "inquiries", force: true do |t|
+    t.string   "email"
+    t.string   "suggested"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "segments", force: true do |t|
+    t.string   "name"
+    t.integer  "geofenceCount"
+    t.integer  "counquestCount"
+    t.string   "location"
+    t.string   "dma"
+    t.integer  "deviceCount"
+    t.string   "imageFilepath"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

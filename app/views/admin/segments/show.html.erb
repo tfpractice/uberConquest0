@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @segment.name %>
+</p>
+
+<p>
+  <strong>Geofencecount:</strong>
+  <%= @segment.geofenceCount %>
+</p>
+
+<p>
+  <strong>Counquestcount:</strong>
+  <%= @segment.counquestCount %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @segment.location %>
+</p>
+
+<p>
+  <strong>Dma:</strong>
+  <%= @segment.dma %>
+</p>
+
+<p>
+  <strong>Devicecount:</strong>
+  <%= @segment.deviceCount %>
+</p>
+
+<p>
+  <strong>Imagefilepath:</strong>
+  <%= @segment.imageFilepath %>
+</p>
+
+<%= link_to 'Edit', edit_admin_segment_path(@segment) %> |
+<%= link_to 'Back', admin_segments_path %>

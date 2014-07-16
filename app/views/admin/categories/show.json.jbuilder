@@ -1,0 +1,1 @@
+json.extract! @category, :name, :featured, :created_at, :updated_at

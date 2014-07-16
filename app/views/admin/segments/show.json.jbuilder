@@ -1,0 +1,1 @@
+json.extract! @segment, :name, :geofenceCount, :counquestCount, :location, :dma, :deviceCount, :imageFilepath, :created_at, :updated_at

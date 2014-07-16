@@ -1,0 +1,39 @@
+<h1>Listing segments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Geofencecount</th>
+      <th>Counquestcount</th>
+      <th>Location</th>
+      <th>Dma</th>
+      <th>Devicecount</th>
+      <th>Imagefilepath</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @segments.each do |segment| %>
+      <tr>
+        <td><%= segment.name %></td>
+        <td><%= segment.geofenceCount %></td>
+        <td><%= segment.counquestCount %></td>
+        <td><%= segment.location %></td>
+        <td><%= segment.dma %></td>
+        <td><%= segment.deviceCount %></td>
+        <td><%= segment.imageFilepath %></td>
+        <td><%= link_to 'Show', [:admin, segment] %></td>
+        <td><%= link_to 'Edit', edit_admin_segment_path(segment) %></td>
+        <td><%= link_to 'Destroy', [:admin, segment], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Segment', new_admin_segment_path %>

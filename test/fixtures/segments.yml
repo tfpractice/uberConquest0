@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  geofenceCount: 1
+  counquestCount: 1
+  location: MyString
+  dma: MyString
+  deviceCount: 1
+  imageFilepath: MyString
+
+two:
+  name: MyString
+  geofenceCount: 1
+  counquestCount: 1
+  location: MyString
+  dma: MyString
+  deviceCount: 1
+  imageFilepath: MyString
