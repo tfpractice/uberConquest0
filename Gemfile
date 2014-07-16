@@ -28,6 +28,14 @@ gem 'spring',        group: :development
 
 gem 'unicorn'
 
+#adminMoments
+
+gem 'devise'
+
+gem 'rails_admin'
+gem 'rails-admin-scaffold'
+
+
 
 
 # Use ActiveModel has_secure_password
