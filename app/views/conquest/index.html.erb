@@ -1,0 +1,16 @@
+<nav> uberconquest logo <span> conquest now </span> </nav>
+<div> header "Donquest in markets customers directle from your copetitors"</div>
+<div> odometer "UberConquest has 682 682 682 mobile phone profiles" </div>
+<section> 
+	<h1> we have 100,oos,  of custom segments </h1>
+	Segments
+
+	<% @segments.each do |segment| %>
+	<div> indvidual segment 
+		<h1> <%= segment.category.name %> </h1>
+		<h2> <%= segment.name %> </h2>
+	</div>
+
+	<% end %>
+
+</section>

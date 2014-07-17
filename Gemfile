@@ -26,6 +26,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+
+###HerokuSays
+gem 'rails_12factor', group: :production
+
 gem 'unicorn'
 
 #adminMoments
@@ -35,8 +39,20 @@ gem 'devise'
 gem 'rails_admin'
 gem 'rails-admin-scaffold'
 
+#compassSassSusy
+gem 'compass-rails'
+gem 'compass-susy-plugin'
+
+###maybe
+
+###maybenot because the compass-rails gem uses susy 1 and the susy gem is v 2
+#gem "susy"
+gem "breakpoint"
 
 
+###for image attachments
+
+gem "paperclip", "~> 4.1"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

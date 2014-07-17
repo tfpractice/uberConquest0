@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
 
 
+    resources :categories, only: [:index, :show], controller: 'conquest'
+    resources :segments, only: [:index, :show], controller: 'conquest'
+
+  get 'conquest/index'
+
+  get 'conquest/show'
+
+  get 'conquest/signup'
+
   namespace :admin do
     resources :inquiries
   end
@@ -17,7 +26,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'sample/index'
 
-  root 'sample#index'
+  root 'conquest#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
