@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140716175547) do
+ActiveRecord::Schema.define(version: 20140716184347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,11 @@ ActiveRecord::Schema.define(version: 20140716175547) do
     t.datetime "updated_at"
   end
 
+  create_table "inquiries_segments", id: false, force: true do |t|
+    t.integer "inquiry_id", null: false
+    t.integer "segment_id", null: false
+  end
+
   create_table "segments", force: true do |t|
     t.string   "name"
     t.integer  "geofenceCount"
@@ -40,7 +45,10 @@ ActiveRecord::Schema.define(version: 20140716175547) do
     t.string   "imageFilepath"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "category_id"
   end
+
+  add_index "segments", ["category_id"], name: "index_segments_on_category_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
