@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
     resources :categories, only: [:index, :show], controller: 'conquest'
     resources :segments, only: [:index, :show], controller: 'conquest'
+    resources :inquiries, only: [:new, :create], controller: 'conquest'
 
+    
   get 'conquest/index'
 
   get 'conquest/show'
@@ -25,6 +27,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   get 'sample/index'
+#  get 'conquest/signUp'
 
   root 'conquest#index'
   # The priority is based upon order of creation: first created -> highest priority.
@@ -81,4 +84,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get ':controller/:action/:id'
 end

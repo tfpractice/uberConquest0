@@ -1,3 +1,88 @@
 // Place all the styles related to the Conquest controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "sass/screen";
+
+body{
+	margin: 0px;
+}
+h1{
+	font-family: $accentFont;
+}
+h2{
+	font-family: $headerFont;
+}
+
+h3,p{
+	font-family: $contentFont;
+}
+
+.siteDiv{
+	margin: 0px;
+
+}
+
+
+#headerNav {
+	height: 6.25rem;
+	color: #3184b3;
+
+	#headerButton{
+		float: right;
+	}
+}
+
+#sitePurpose{
+
+
+	background-color: #0000ff;
+	@include background(linear-gradient(bottom center, #276a90, #3185b4));
+
+
+	#purposeContainer{
+		height: 22rem;
+		#summaryDiv{
+			text-align: center;
+			@include columns(6);
+			.summaryText{
+				color: #ffffff;
+			}
+			#inMarket{
+				color: #cfca14;
+			}
+		}
+		#purposeImage{
+			height: 20rem;
+			float: right;
+		}
+	}
+}
+#odometerDiv{
+	height: 10rem;
+	background-color: #d4d4d4;
+	text-align: center;
+
+	.odometer{
+		font-size: 3rem;
+	}
+}
+
+
+#footerDiv{
+	height: 12.5rem;
+	background-color: #133b55;
+
+
+	#cityImage{
+	@include columns(4);
+}
+
+	#footerButton{
+		float: right;
+	}
+}
+
+
+.buttonText{
+	font-size: 1rem;
+}

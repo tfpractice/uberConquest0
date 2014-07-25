@@ -1,0 +1,16 @@
+// Imports -------------------------------------------------------------------
+@import url('http://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:600,700|Maven+Pro:400,700');
+@import "susy";
+
+// Grid ----------------------------------------------------------------------
+
+$total-cols             : 12;
+$col-width              : 4em;
+$gutter-width           : 1em;
+$side-gutter-width      : $gutter-width;
+
+$show-grid-backgrounds  : true;
+
+$accentFont				: 'Maven Pro', sans-serif;
+$headerFont				: 'Lato', sans-serif;
+$contentFont			: 'Open Sans', sans-serif;

@@ -1,6 +1,14 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+// Imports -------------------------------------------------------------------
+@import "compass";
+@import "susy";
+@import "variables";
+@import "base";
+@import "layout";
 
-@import "compass/reset";
+/* Layout ------------------------------------------------------------------*/
+
+.container {
+  @include container;
+  @include susy-grid-background;
+  margin-bottom: -2rem !important;
+}

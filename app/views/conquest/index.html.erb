@@ -1,18 +1,80 @@
-<nav> <h1> UberConquest <%= image_tag "uberMediaLogo.png" %> </h1> by  <span> conquest now </span> </nav>
+
+	<nav class = "siteDiv" id = "headerNav">
+<div class = "appContainer" id = "headerContainer">
 
 
-<div> header "Donquest in markets customers directle from your copetitors"</div>
-<div> odometer "UberConquest has 682 682 682 mobile phone profiles" </div>
-<section> 
-	<h1> we have 100,oos,  of custom segments </h1>
-	Segments
+	<h1 class = "title"> UberConquest by <%= image_tag "uberMediaLogo.png" %>  
+		<span class = "conquestButton" id = "headerButton">
+		<a href="/conquest/signup" class="fancybox fancybox.ajax">
+			<h1 class = "buttonText">conquest now</h1> 
+		</a>
+		</span> 
+	</h1>
 
-	<% @segments.each do |segment| %>
-	<div> indvidual segment 
-		<h1> <%= segment.category.name %> </h1>
-		<h2> <%= segment.name %> </h2>
+</div>
+</nav>
+
+
+<div class = "siteDiv" id = "sitePurpose">
+	<div class = "appContainer" id = "purposeContainer">
+		<div id = "summaryDiv">
+			<h2 class = "summaryText"> Conquest <span id="inMarket">in-market</span> </h2>
+			<h2 class = "summaryText"> customers directly from </h2>
+			<h2 class = "summaryText"> your competitors </h2>
+		</div>
+		
+		<div class = "imageContainer" > <%= image_tag "handEarthPic.png", id: "purposeImage"%> 
+			</div>
+	</div>
+</div>
+
+
+
+<div class = "siteDiv" id = "odometerDiv"> 
+	<div class = "appContainer" id = "odometerContainer">
+		<p class = "odometerText">UberConquest has 
+			<span class = "odometer">682682682</span>
+			mobile phone profiles
+		</p> 
+		<p class = "odometerText"> that allow you to reach precise audiences </p>
+	</div>
+</div>
+
+
+<section id = "segmentSection"> 
+	<div class = "appContainer" id = "segmentContainer">
+		<h2> we have 100,000s  of custom segments </h2>
+	
+		<% @categories.each do |category| %>
+		<div class = "categoryDiv"> 
+			<h2> <%= category.name %> </h2>
+			<% category.segments.each do |segment| %>
+				<ul class = "segmentList">
+					<li class = "segmentItem"> 
+						<p class = "segmentName">
+							<%= segment.name %> <span class = "segmentCount"> <%= segment.conquestCount %> </span>
+						</p> 
+					</li>
+					<li> <%= link_to "#{segment.name}", segment_path(@segment), class: "fancybox fancybox.ajax" %> </li>
+				</ul>
+			<% end %>
+			
+		</div>
+	
+		<% end %>
 	</div>
 
-	<% end %>
-
 </section>
+
+<div class = "siteDiv" id = "footerDiv">
+	<div class = "appContainer" id = "footerContainer">
+		<span id = "cityImage"> <%= image_tag "city.png" %>
+		</span> 
+				 <a href="/conquest/signup" class="fancybox fancybox.ajax">
+
+		<span class = "conquestButton" id = "footerButton">
+			 <h1 class = "buttonText" >conquest now</h1> 
+		 </span>
+		 </a>
+	</div>
+</div>

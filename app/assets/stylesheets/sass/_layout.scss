@@ -1,0 +1,24 @@
+@import "compass";
+@import "variables";
+@import "base";
+@import "susy";
+@import "breakpoint";
+
+
+
+.appContainer{
+	 @include container;
+  	//@include susy-grid-background;
+  	
+}
+#segmentSection{
+
+	.categoryDiv{
+		width: columns(4, 12);
+		border-radius: 5px;
+		background-color: #ffffff;
+		box-shadow: 5px 5px 5px #888888;
+	}
+
+
+}
