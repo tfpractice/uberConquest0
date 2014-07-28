@@ -27,6 +27,8 @@ h3,p{
 	height: 6.25rem;
 	color: #3184b3;
 	margin-top: 0px;
+	margin-bottom: -2rem;
+
 
 	#headerButton{
 		float: right;
@@ -72,7 +74,7 @@ h3,p{
 	color: #666666;
 
 	#odometerHolder{
-		
+
 
 		.odometerText{
 		
@@ -100,12 +102,4 @@ h3,p{
 }
 
 
-.buttonText{
-	font-size: 1rem;
-}
 
-//.categoryDiv{ 
-//<% @categories.each do |category|%>
-//		background-image: url('<%= category.background %>');
-//		<% end %>
-//	}

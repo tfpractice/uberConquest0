@@ -1,5 +1,46 @@
-<h1>Conquest#signup</h1>
-<p>"hello"</p>
-<%= render 'form' %>
+<% @categories = Category.all %>
 
-<p>Find me in app/views/conquest/signup.html.erb</p>
+
+<div class = "conquestPlannerContainer">
+	<div class = "conquestPlannerHeaderDiv">
+		<h1 class = "conquestPlannerHeader">Plan Your Conquest</h1>
+		<h1 class = "conquestPlannerHeaderSub"><em>And We'll Get Right Back to You</em></h1>
+		<%= render 'form' %>
+	</div>
+
+	<div class= "segmentSelectorSection">
+		<p> Select which market segment(s) you would like to request:</p>
+		<div class = "selectableSegments">
+			<% @categories.each do |category| %>
+			<div class = "signUpCategoryDiv">
+				<h2 class = "signUpCategoryName"> <%= category.name %> </h2>
+				<ul class = "signUpSegmentList">
+					<% category.segments.each do |segment|%>
+					<li> <%= segment.name %> </li>
+					<% end %>
+				</ul>
+			</div>
+			<% end %>
+		</div>
+	</div>
+
+	<div class = "suggestionDiv">
+		<p class = "suggestionInstruction"> Don't see the segment you're looking for? We may still have it. Tell us who you want to reach: </p>
+		<span class = "suggestionInput"></span>
+	</div>
+
+
+	<div class = "segmentConquest">
+    <span class = "conquestButton" id = "headerButton">
+    <a href="/conquest/signup" class="fancybox fancybox.ajax">
+      <h1 class = "buttonText">Conquest Now <%= image_tag "buttonIcon.png", class: "buttonIcon" %>
+        </h1>
+    </a>
+    </span> 
+  </div>
+
+</div>
+
+
+
+

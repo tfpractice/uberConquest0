@@ -1,43 +1,56 @@
-<h1>Conquest#show</h1>
-<p>Find me in app/views/conquest/show.html.erb</p>
 
-<%# @segment = Segment.where(id: params[:id]) %>
+
 <% @segment = Segment.find(params[:id]) %>
+
+<div class="segmentInstanceContainer">
+  <div class="segmentInstanceHeader">
+      <h2 class = "segmentInstanceName">
+        <%= @segment.name %>
+      </h2>
+      <p class="sengmentInstanceGeofences">
+           <%= "#{@segment.geofenceCount }" + "geo-fenced locations" %>
+      </p>
+      <p class="segmentInstanceConquest">
+          <%= "#{@segment.conquestCount}" + "conquestable visitors per month" %>
+      </p>
+  </div>
+
+  <div class="segmentInstanceLocationContainer">
+    <p class="segmentInstanceLocationHeader">
+        <%= @segment.location %>
+    </p>
+  </div>
+
+  <div class = "segmentInstanceInfoContainer">
+    <p class = "segmentInstanceLocation1">  <strong><%= @segment.location %></strong> </p>
+    <ul class= "segmentInstanceInfoList">
+      <li class = "segmentInstanceListItem segmentInstanceLocation2">
+        <%= image_tag "pinIcon.png", class: "segmentInstanceListIcon" %>  <%= @segment.location %>
+      </li>
+      <li class = "segmentInstanceListItem" id= "segmentInstanceDMA">
+       <%= image_tag "dmaIcon.png", class: "segmentInstanceListIcon" %>  <%= @segment.dma %>
+      </li>
+       <li class = "segmentInstanceListItem" id=  "segmentInstanceDeviceCount">
+       <%= image_tag "phoneIcon.png", class: "segmentInstanceListIcon" %>  <%= "#{@segment.deviceCount}" + "/month" %>
+      </li>
+    </ul>
+     <div class= "segmentInstanceImageContainer"> 
+      <%= image_tag "#{@segment.image.url}", class: "segmentInstanceImage" %>
+     </div>
+  </div>
+
+  <div class = "segmentConquest">
+    <span class = "conquestButton" id = "headerButton">
+    <a href="/conquest/signup" class="fancybox fancybox.ajax">
+      <h1 class = "buttonText">Conquest Now <%= image_tag "buttonIcon.png", class: "buttonIcon" %>
+        </h1>
+    </a>
+    </span> 
+  </div>
+</div>
+
+
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @segment.name %>
-</p>
-
-<p>
-  <strong>Geofencecount:</strong>
-  <%= @segment.geofenceCount %>
-</p>
-
-<p>
-  <strong>Conquestcount:</strong>
-  <%= @segment.conquestCount %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @segment.location %>
-</p>
-
-<p>
-  <strong>Dma:</strong>
-  <%= @segment.dma %>
-</p>
-
-<p>
-  <strong>Devicecount:</strong>
-  <%= @segment.deviceCount %>
-</p>
-
-<p>
-  <strong>Imagefilepath:</strong>
-  <%= @segment.imageFilepath %>
-</p>
 
