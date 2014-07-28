@@ -3,3 +3,10 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
 	$(".fancybox").fancybox()
+
+	odometer = $(".odometer")
+	oValue = odometer.html
+	oValue = 682682682
+	odometer.click ->
+		updatedValue = oValue + 15000
+		odometer.html(updatedValue)

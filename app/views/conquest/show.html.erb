@@ -1,2 +1,41 @@
 <h1>Conquest#show</h1>
 <p>Find me in app/views/conquest/show.html.erb</p>
+<% @segment = @segment %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @segment.name %>
+</p>
+
+<p>
+  <strong>Geofencecount:</strong>
+  <%= @segment.geofenceCount %>
+</p>
+
+<p>
+  <strong>Conquestcount:</strong>
+  <%= @segment.conquestCount %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @segment.location %>
+</p>
+
+<p>
+  <strong>Dma:</strong>
+  <%= @segment.dma %>
+</p>
+
+<p>
+  <strong>Devicecount:</strong>
+  <%= @segment.deviceCount %>
+</p>
+
+<p>
+  <strong>Imagefilepath:</strong>
+  <%= @segment.imageFilepath %>
+</p>
+

@@ -18,7 +18,7 @@ h3,p{
 }
 
 .siteDiv{
-	margin: 0px;
+	margin: -1rem;
 
 }
 
@@ -26,6 +26,7 @@ h3,p{
 #headerNav {
 	height: 6.25rem;
 	color: #3184b3;
+	margin-top: 0px;
 
 	#headerButton{
 		float: right;
@@ -54,6 +55,8 @@ h3,p{
 		#purposeImage{
 			height: 20rem;
 			float: right;
+			margin-top: 2rem;
+			
 		}
 	}
 }
@@ -61,11 +64,13 @@ h3,p{
 	height: 10rem;
 	background-color: #d4d4d4;
 	text-align: center;
+	color: #666666;
 
 	.odometer{
 		font-size: 3rem;
 	}
 }
+
 
 
 #footerDiv{

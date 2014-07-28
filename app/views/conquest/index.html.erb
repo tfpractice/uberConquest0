@@ -6,7 +6,8 @@
 	<h1 class = "title"> UberConquest by <%= image_tag "uberMediaLogo.png" %>  
 		<span class = "conquestButton" id = "headerButton">
 		<a href="/conquest/signup" class="fancybox fancybox.ajax">
-			<h1 class = "buttonText">conquest now</h1> 
+			<h1 class = "buttonText">Conquest Now <%= image_tag "buttonIcon.png", class: "buttonIcon" %>
+				</h1>
 		</a>
 		</span> 
 	</h1>
@@ -33,17 +34,17 @@
 <div class = "siteDiv" id = "odometerDiv"> 
 	<div class = "appContainer" id = "odometerContainer">
 		<p class = "odometerText">UberConquest has 
-			<span class = "odometer">682682682</span>
+			<span class = "odometer"></span>
 			mobile phone profiles
 		</p> 
-		<p class = "odometerText"> that allow you to reach precise audiences </p>
+		<p class = "odometerText"> <b>that allow you to reach precise audiences</b> </p>
 	</div>
 </div>
 
 
 <section id = "segmentSection"> 
 	<div class = "appContainer" id = "segmentContainer">
-		<h2> we have 100,000s  of custom segments </h2>
+		<h2 id = "segmentHeader"> we have 100,000s  of custom segments </h2>
 	
 		<% @categories.each do |category| %>
 		<div class = "categoryDiv"> 
@@ -52,10 +53,11 @@
 				<ul class = "segmentList">
 					<li class = "segmentItem"> 
 						<p class = "segmentName">
-							<%= segment.name %> <span class = "segmentCount"> <%= segment.conquestCount %> </span>
+							<%= link_to "#{segment.name}", segment_path(@segment), class: "fancybox fancybox.ajax" %>
+							<span class = "segmentCount"> <%= segment.conquestCount %> </span>
 						</p> 
 					</li>
-					<li> <%= link_to "#{segment.name}", segment_path(@segment), class: "fancybox fancybox.ajax" %> </li>
+					
 				</ul>
 			<% end %>
 			
@@ -70,11 +72,10 @@
 	<div class = "appContainer" id = "footerContainer">
 		<span id = "cityImage"> <%= image_tag "city.png" %>
 		</span> 
-				 <a href="/conquest/signup" class="fancybox fancybox.ajax">
-
-		<span class = "conquestButton" id = "footerButton">
-			 <h1 class = "buttonText" >conquest now</h1> 
-		 </span>
+		<a href="/conquest/signup" class="fancybox fancybox.ajax">
+			<span class = "conquestButton" id = "footerButton">
+				 <h1 class = "buttonText">Conquest Now</h1> 
+			 </span>
 		 </a>
 	</div>
 </div>

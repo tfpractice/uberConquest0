@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var fancybox = function(){
+    $(".fancybox").fancybox();
+};
+$(document).on("page:update ready", fancybox);
+$(document).on("page:change ready", fancybox);

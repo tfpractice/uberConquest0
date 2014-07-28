@@ -5,14 +5,15 @@ before_action :set_category, :set_segment
 
   def index
   	@categories = Category.includes(:segments).all
-  	@segments = Segment.all
+  	@segments = Segment.includes(:categories).all
+
 
   end
 
   def show
 
   	@categories = Category.includes(:segments).all
-  	@segments = Segment.all
+  	@segments = Segment.includes(:categories).all
   end
 
   def hello
@@ -33,7 +34,8 @@ before_action :set_category, :set_segment
     end
 
     def set_segment
-      @segment = Segment.where(id: params[:id])
+       @segment = Segment.where(id: params[:id])
+      #@segment = Segment.find(params[:id])
     end
 
     def segment_params

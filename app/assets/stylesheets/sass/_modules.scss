@@ -2,7 +2,16 @@
 
 
 .conquestButton{
-
+	border-radius: 5px;
 	background-color: #ff0000;
 	width: columns(2,12);
+	text-align: center;
+	color: #f0eae7;
+
+	a{
+
+		&:after{
+		color: #f0eae7;
+		}
+	}
 }
