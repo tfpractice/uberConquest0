@@ -45,8 +45,13 @@ h3,p{
 		#summaryDiv{
 			text-align: center;
 			@include columns(6);
+			margin-top: 6rem;
 			.summaryText{
+
 				color: #ffffff;
+				margin-top: 0.5rem;
+				margin-bottom: 0.5rem;
+				font-size: 2rem;
 			}
 			#inMarket{
 				color: #cfca14;
@@ -66,8 +71,15 @@ h3,p{
 	text-align: center;
 	color: #666666;
 
-	.odometer{
-		font-size: 3rem;
+	#odometerHolder{
+		
+
+		.odometerText{
+		
+		}
+		.odometer{
+			font-size: 3rem;
+		}
 	}
 }
 
@@ -91,3 +103,9 @@ h3,p{
 .buttonText{
 	font-size: 1rem;
 }
+
+//.categoryDiv{ 
+//<% @categories.each do |category|%>
+//		background-image: url('<%= category.background %>');
+//		<% end %>
+//	}

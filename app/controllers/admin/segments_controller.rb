@@ -69,6 +69,6 @@ class Admin::SegmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def segment_params
-      params.require(:segment).permit(:name, :geofenceCount, :counquestCount, :location, :dma, :deviceCount, :imageFilepath)
+      params.require(:segment).permit(:name, :geofenceCount, :counquestCount, :location, :dma, :deviceCount, :imageFilepath, :image)
     end
 end
