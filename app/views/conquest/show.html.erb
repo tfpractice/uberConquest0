@@ -1,6 +1,8 @@
 <h1>Conquest#show</h1>
 <p>Find me in app/views/conquest/show.html.erb</p>
-<% @segment = @segment %>
+
+<%# @segment = Segment.where(id: params[:id]) %>
+<% @segment = Segment.find(params[:id]) %>
 
 <p id="notice"><%= notice %></p>
 

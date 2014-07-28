@@ -53,7 +53,8 @@
 				<ul class = "segmentList">
 					<li class = "segmentItem"> 
 						<p class = "segmentName">
-							<%= link_to "#{segment.name}", segment_path(@segment), class: "fancybox fancybox.ajax" %>
+							<%= segment_path(segment) %>
+							<%= link_to "#{segment.name}", segment_path(segment), class: "fancybox fancybox.ajax" %>
 							<span class = "segmentCount"> <%= segment.conquestCount %> </span>
 						</p> 
 					</li>

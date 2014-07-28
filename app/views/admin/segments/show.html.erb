@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= @segment = Segment.where(id: params[:id]) %>
+
 <p>
   <strong>Name:</strong>
   <%= @segment.name %>
