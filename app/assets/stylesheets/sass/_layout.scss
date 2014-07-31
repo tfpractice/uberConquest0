@@ -4,6 +4,7 @@
 @import "susy";
 @import "modules";
 @import "breakpoint";
+@import "responsiveBreakpoints";
 
 
 
@@ -14,6 +15,7 @@
 }
 #segmentSection{
 	#segmentContainer{
+	//@include susy-grid-background;
 	padding-top: 1rem;
 	padding-bottom: 3rem;
 
@@ -25,7 +27,8 @@
 
 	
 	.categoryDiv{
-		@include columns(4);
+		@include columns(3.5);
+		min-height: 10rem;
 		border-radius: 5px;
 		background-color: #ffffff;
 		box-shadow: 5px 5px 10px #888888;
@@ -154,32 +157,72 @@
 .conquestPlannerContainer{
 	 @include container;
 	 .conquestPlannerHeaderDiv{
+		color: #3184b3;
+		text-align: center;
+		border-bottom: 1px solid #aaaaaa;
+		padding-bottom: 1rem;
 	 	.conquestPlannerHeader{
+	 	margin-bottom: 0.5rem;
+
 
 	 	}
 	 	.conquestPlannerHeaderSub{
+	  	margin-top: 0.5rem;
+	  	font-weight: normal;
+
 
 	 	}
 	 }
 	 .segmentSelectorSection{
+	 	@include container;
+	 	// @include susy-grid-background;
+	 	background-color: #f8f8f8;
+	 	margin-bottom: 2rem;
+	 	
+
 	 	.selectableSegments{
 	 		.signUpCategoryDiv{
+	 			padding: 0.5rem;
+	 			min-height: 10rem;
+
+	 			@include columns(2.7);
+	 			background-color: #ffffff;
+	 			border: 1px solid #aaaaaa;
+	 			border-radius: 5px;
+	 			margin-bottom: 1rem;
 	 			.signUpCategoryName{
+	 				font-size: 1rem;
+
 
 	 			}
 	 			.signUpSegmentList{
+	 				list-style-type: none;
+	 				padding-left: 0rem;
+	 				.signUpSegmentName{
+	 					font-size: 0.8rem;
+	 				}
 
 	 			}
 	 		}
 	 	}
 	 }
 	 .suggestionDiv{
+	 	border-top: 1px solid #aaaaaa;
+	 	border-bottom: 1px solid #aaaaaa;
+	 	margin-bottom: 2rem;
+	 	padding-bottom: 1rem;
+
+
 	 	.suggestionInstruction{
 
 	 	}
 	 	.suggestionInput{
-	 		
+
 	 	}
+	 }
+
+	 .actions{
+	 	float: right;
 	 }
 
 }

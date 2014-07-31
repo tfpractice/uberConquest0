@@ -47,6 +47,6 @@ before_action :set_category, :set_segment
     end
 
     def inquiry_params
-      params.require(:inquiry).permit(:email, :suggested)
+      params.require(:inquiry).permit(:email, :suggested, segments_attributes: [:id])
     end
 end

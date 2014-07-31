@@ -5,7 +5,7 @@
 
 	<h1 class = "title"> UberConquest by <%= image_tag "uberMediaLogo.png" %>  
 		<span class = "conquestButton" id = "headerButton">
-		<a href="/conquest/signup" class="fancybox fancybox.ajax">
+		<a href="/conquest/signup" class="fancybox fancybox.iframe">
 			<h1 class = "buttonText">Conquest Now <%= image_tag "buttonIcon.png", class: "buttonIcon" %>
 				</h1>
 		</a>
@@ -60,7 +60,7 @@
 				<ul class = "segmentList">
 					<li class = "segmentItem"> 
 						<p class = "segmentName">
-							<%= link_to "#{segment.name}", segment_path(segment), class: "fancybox fancybox.ajax" %>
+							<%= link_to "#{segment.name}", segment_path(segment), class: "fancybox fancybox.iframe" %>
 							<span class = "segmentCount"> <%= segment.conquestCount %> </span>
 						</p> 
 					</li>
@@ -77,10 +77,10 @@
 
 <div class = "siteDiv" id = "footerDiv">
 	<div class = "appContainer" id = "footerContainer">
-		<span id = "cityImage"> <%= image_tag "city.png" %>
-		</span> 
+		
+		<%= image_tag "city.png", id: "cityImage" %>
 		<span class = "conquestButton" id = "footerButton">
-		<a href="/conquest/signup" class="fancybox fancybox.ajax">
+		<a href="/conquest/signup" class="fancybox fancybox.iframe">
 			
 				 <h1 class = "buttonText">Conquest Now</h1> 
 				 <h1 class = "buttonText">choose a segment</h1> 

@@ -4,9 +4,12 @@
 $ ->
 	$(".fancybox").fancybox()
 
+	$('#headerNav').scrollToFixed()
 	odometer = $(".odometer")
-	oValue = odometer.html
-	oValue = 682682682
+	oValue = odometer.text()
+	odometer.text("682682682")
 	odometer.click ->
-		updatedValue = oValue + 15000
-		odometer.html(updatedValue)
+#		oValue = odometer.text()
+		updatedValue = (oValue + 15000)
+		console.log
+		odometer.text(updatedValue)

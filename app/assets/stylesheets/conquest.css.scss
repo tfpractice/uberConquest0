@@ -24,10 +24,14 @@ h3,p{
 
 
 #headerNav {
-	height: 6.25rem;
+	height: 5rem;
 	color: #3184b3;
-	margin-top: 0px;
+	margin-top: 0rem;
 	margin-bottom: -2rem;
+	//#headerContainer{
+	background-color: #ffffff;
+//	}
+	
 
 
 	#headerButton{
@@ -90,6 +94,8 @@ h3,p{
 #footerDiv{
 	height: 12.5rem;
 	background-color: #133b55;
+	padding-bottom: 2rem;
+
 
 
 	#cityImage{

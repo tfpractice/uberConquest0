@@ -25,7 +25,8 @@
     <p class = "segmentInstanceLocation1">  <strong><%= @segment.location %></strong> </p>
     <ul class= "segmentInstanceInfoList">
       <li class = "segmentInstanceListItem segmentInstanceLocation2">
-        <%= image_tag "pinIcon.png", class: "segmentInstanceListIcon" %>  <%= @segment.location %>
+        <%= image_tag "pinIcon.png", class: "segmentInstanceListIcon" %>  
+        <%= @segment.location %>
       </li>
       <li class = "segmentInstanceListItem" id= "segmentInstanceDMA">
        <%= image_tag "dmaIcon.png", class: "segmentInstanceListIcon" %>  <%= @segment.dma %>
@@ -40,7 +41,7 @@
   </div>
 
   <div class = "segmentConquest">
-    <span class = "conquestButton" id = "headerButton">
+    <span class = "conquestButton" id = "segmentConquestHeaderButton">
     <a href="/conquest/signup" class="fancybox fancybox.ajax">
       <h1 class = "buttonText">Conquest Now <%= image_tag "buttonIcon.png", class: "buttonIcon" %>
         </h1>

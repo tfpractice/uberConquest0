@@ -5,7 +5,28 @@
 	<div class = "conquestPlannerHeaderDiv">
 		<h1 class = "conquestPlannerHeader">Plan Your Conquest</h1>
 		<h1 class = "conquestPlannerHeaderSub"><em>And We'll Get Right Back to You</em></h1>
-		<%= render 'form' %>
+		<%# render 'form' %>
+		<div id="formDiv">
+			<%= form_for([:admin, @inquiry]) do |f| %>
+ 		 <% if @inquiry.errors.any? %>
+    	<div id="error_explanation">
+     	 <h2><%= pluralize(@inquiry.errors.count, "error") %> prohibited this inquiry from being saved:</h2>
+
+     	 <ul>
+     	 <% @inquiry.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+     	 <% end %>
+    	  </ul>
+   			 </div>
+  		<% end %>
+
+  <div class="field">
+     <%= f.label :email, "Enter your email:" %>  <%= f.text_field :email %>
+    </div>
+  
+  
+<% end %>
+		</div>
 	</div>
 
 	<div class= "segmentSelectorSection">
@@ -14,11 +35,16 @@
 			<% @categories.each do |category| %>
 			<div class = "signUpCategoryDiv">
 				<h2 class = "signUpCategoryName"> <%= category.name %> </h2>
+				<%= form_for([:admin, @inquiry]) do |f| %>
 				<ul class = "signUpSegmentList">
-					<% category.segments.each do |segment|%>
-					<li> <%= segment.name %> </li>
+					<%# f.fields_for :segments do |segments| %>
 					<% end %>
+					<li><%# segments.check_box :_destroy%></li>
+					<% category.segments.each do |segment|%>
+					<li> <p class = "signUpSegmentName"><%= segment.name %></p> </li>
+					<%# end %>
 				</ul>
+				<% end %>
 			</div>
 			<% end %>
 		</div>
@@ -26,17 +52,29 @@
 
 	<div class = "suggestionDiv">
 		<p class = "suggestionInstruction"> Don't see the segment you're looking for? We may still have it. Tell us who you want to reach: </p>
-		<span class = "suggestionInput"></span>
+		<span class = "suggestionInput">
+			<%= form_for([:admin, @inquiry]) do |f| %>
+		<div class="field">
+      <%= f.label :suggested, "suggestions" %>   <%= f.text_field :suggested %>
+    </div>
+<% end %></span>
 	</div>
 
 
 	<div class = "segmentConquest">
-    <span class = "conquestButton" id = "headerButton">
-    <a href="/conquest/signup" class="fancybox fancybox.ajax">
-      <h1 class = "buttonText">Conquest Now <%= image_tag "buttonIcon.png", class: "buttonIcon" %>
+    <%= form_for([:admin, @inquiry]) do |f| %>
+    <div class="actions">
+    <%= f.submit "conquest" %>
+  </div>
+
+   <!-- <a href="/conquest/signup" class="fancybox fancybox.ajax">
+      <h1 class = "buttonText">Conquest Now <%#image_tag "buttonIcon.png", class: "buttonIcon" %>
         </h1>
     </a>
-    </span> 
+-->
+    <% end %>
+
+
   </div>
 
 </div>
