@@ -1,4 +1,7 @@
 <% @categories = Category.all %>
+<%# render "form" %>
+
+
 
 
 <div class = "conquestPlannerContainer">
@@ -21,7 +24,9 @@
   		<% end %>
 
   <div class="field">
+  	<%= form_for([:admin, @inquiry], url: {action: "create"}) do |f| %>
      <%= f.label :email, "Enter your email:" %>  <%= f.text_field :email %>
+     <% end %>
     </div>
   
   
@@ -35,16 +40,19 @@
 			<% @categories.each do |category| %>
 			<div class = "signUpCategoryDiv">
 				<h2 class = "signUpCategoryName"> <%= category.name %> </h2>
-				<%= form_for([:admin, @inquiry]) do |f| %>
-				<ul class = "signUpSegmentList">
-					<%# f.fields_for :segments do |segments| %>
-					<% end %>
-					<li><%# segments.check_box :_destroy%></li>
-					<% category.segments.each do |segment|%>
-					<li> <p class = "signUpSegmentName"><%= segment.name %></p> </li>
-					<%# end %>
-				</ul>
-				<% end %>
+        <%= form_for([:admin, @inquiry], url: {action: "create"}) do |f| %>
+        <% category.segments.each do |segment| %>
+        <%# f.fields_for :segments do |iSegment| %>
+        <%# iSegment.label :segments, "#{segment.name}" %>  
+        <%# iSegment.check_box :name %>
+        <%#end %>
+        <%# @inquiry.segments.build %>
+             <%# f.label :segments, "#{segment.name}" %> 
+              <%= f.check_box :segments %>
+
+        <%end%>
+     <% end %>
+
 			</div>
 			<% end %>
 		</div>
@@ -65,7 +73,7 @@
     <%= form_for([:admin, @inquiry]) do |f| %>
     <div class="actions">
     <%= f.submit "conquest" %>
-  </div>
+  	</div>
 
    <!-- <a href="/conquest/signup" class="fancybox fancybox.ajax">
       <h1 class = "buttonText">Conquest Now <%#image_tag "buttonIcon.png", class: "buttonIcon" %>

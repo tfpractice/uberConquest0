@@ -1,6 +1,6 @@
 class ConquestController < ApplicationController
 before_action :set_category, :set_segment
-#before_action :set_inquiry, only: [:show, :edit, :update, :destroy]
+before_action :set_inquiry, only: [:show, :edit, :update, :destroy]
 
 
   def index
@@ -20,7 +20,11 @@ before_action :set_category, :set_segment
   end
 
   def signup
-      @inquiry = Inquiry.new()
+      @inquiry = Inquiry.new
+          ###added post-railscast
+
+      @inquiry.segments.build
+      
       #render "inquiries/new"
   end
 
@@ -44,9 +48,10 @@ before_action :set_category, :set_segment
 
     def set_inquiry
       @inquiry = Inquiry.find(params[:id])
+      #@inquiry = Inquiry.where(id: params[:id])
     end
 
     def inquiry_params
-      params.require(:inquiry).permit(:email, :suggested, segments_attributes: [:id])
+      params.require(:inquiry).permit(:email, :suggested)
     end
 end

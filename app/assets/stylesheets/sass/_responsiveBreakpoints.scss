@@ -10,4 +10,284 @@ $ipodHorizontal		: 30em;
 $ipadVertical		: 48em;
 $ipadHorizontal		: 64em;
 $macbookVertical	: 50em;
-$macbookHorizontal	: 82em;
+$macbookHorizontal	: 80em;
+
+
+//@include breakpoint($ipodVertical $ipodHorizontal){
+//}
+
+@include breakpoint($ipodVertical $ipadHorizontal){
+	.appContainer{
+	 @include container;
+  	//@include susy-grid-background;
+  	
+}
+
+#headerNav {
+	height: 3rem;
+	color: #3184b3;
+	margin-top: 0rem;
+	margin-bottom: -0.5rem;
+	//#headerContainer{
+	background-color: #ffffff;
+	font-size: 0.5rem;
+	.title{
+		margin-left: 2rem;
+	}
+	.conquestButton{
+	border-radius: 5px;
+	background-color: #ff0000;
+	width: columns(5,12);
+	text-align: center;
+	color: #f0eae7;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+
+	a{
+
+		&:after{
+		color: #f0eae7;
+		}
+
+	.buttonText{
+	margin-top: 0px;
+	font-size: 0.5rem;
+
+}
+	.buttonIcon{
+		width: 1rem;
+		height: 1rem;
+	}
+
+	}
+}
+////	}
+	//
+//
+//
+	//#headerButton{
+	//	float: right;
+	//}
+}
+///
+
+
+
+#sitePurpose{
+
+
+	background-color: #0000ff;
+	@include background(linear-gradient(bottom center, #276a90, #3185b4));
+		padding-right: 2rem;
+
+
+	#purposeContainer{
+		height: 6rem;
+		#summaryDiv{
+			text-align: center;
+			@include columns(8);
+			margin-top: 1rem;
+			.summaryText{
+
+				color: #ffffff;
+				//margin-top: 0.5rem;
+				//margin-bottom: 0.5rem;
+				font-size: 0.5rem;
+			}
+			#inMarket{
+				color: #cfca14;
+			}
+		}
+		#purposeImage{
+			height: 4rem;
+			float: right;
+			margin-top: 1rem;
+			
+		}
+	}
+}
+
+#odometerDiv{
+	height: 4rem;
+	background-color: #d4d4d4;
+	text-align: center;
+	color: #666666;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+
+	#odometerHolder{
+
+
+		.odometerText{
+			font-size: 0.75rem;
+		
+		}
+		.odometer{
+			font-size: 1rem;
+		}
+	}
+}
+
+
+
+
+
+
+
+#segmentSection{
+	padding-left: 1rem;
+	padding-right: 1rem;
+	#segmentContainer{
+	//@include susy-grid-background;
+	padding-top: 1rem;
+	padding-bottom: 3rem;
+
+	#segmentHeader{
+		font-size: 1rem;
+		color: #666666;
+		text-align: center;
+	}
+
+	
+	.categoryDiv{
+		@include columns(10);
+		width: columns(12)!important;
+		clear: both;
+		min-height: 4rem!important;
+		border-radius: 5px;
+		background-color: #ffffff;
+		box-shadow: 5px 5px 10px #888888;
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+		color: #3184b3;
+		padding-left: 1rem;
+		padding-right: 1rem;
+
+
+		.categoryName{
+			font-size: 1rem;
+
+		}
+		.segmentList{
+			list-style: none;
+			padding-left: 0rem;
+
+			.segmentItem{
+				border-bottom: 1px solid #aaaaaa;
+
+				.segmentName{
+					font-size: 0.8rem;
+				
+	
+					.segmentCount{
+					float: right;
+					color: #cfca14;
+
+					}
+				}
+			}
+		}
+
+		
+	}
+}
+
+}
+
+
+
+
+
+
+
+
+
+#footerDiv{
+	height: 12rem;
+	background-color: #133b55;
+	padding-bottom: 0.5rem;
+	padding: 1rem;
+
+
+
+	#cityImage{
+	@include columns(4);
+}
+
+	#footerButton{
+		float: right;
+		margin-top: 2rem;
+	}
+		.conquestButton{
+	border-radius: 5px;
+	background-color: #ff0000;
+	width: columns(5,12);
+	text-align: center;
+	color: #f0eae7;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+
+	a{
+
+		&:after{
+		color: #f0eae7;
+		}
+
+	.buttonText{
+	margin-top: 0px;
+	font-size: 0.5rem;
+
+}
+	.buttonIcon{
+		width: 1rem;
+		height: 1rem;
+	}
+
+	}
+}
+}
+
+
+}
+/////////////////////////////////////////////////
+///-------------------///////
+///////////////////////////////////
+@include breakpoint($ipadVertical $ipadHorizontal){
+
+#headerNav {
+	//height: 1rem;
+	//color: #3184b3;
+	//margin-top: 0rem;
+	//margin-bottom: -2rem;
+	////#headerContainer{
+	//background-color: #ffffff;
+////	}
+	//
+//
+//
+	//#headerButton{
+	//	float: right;
+	//}
+}
+}
+/////////////////////////////////////////////////
+///-------------------///////
+///////////////////////////////////
+@include breakpoint($macbookHorizontal){
+
+#headerNav {
+	//height: 1rem;
+	//color: #3184b3;
+	//margin-top: 0rem;
+	//margin-bottom: -2rem;
+	////#headerContainer{
+	//background-color: #ffffff;
+////	}
+	//
+//
+//
+	//#headerButton{
+	//	float: right;
+	//}
+}
+}
