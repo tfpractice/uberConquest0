@@ -18,19 +18,19 @@
      	 <ul>
      	 <% @inquiry.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
-     	 <% end %>
+     	            <% end %>
     	  </ul>
    			 </div>
-  		<% end %>
+  		            <% end %>
 
   <div class="field">
-  	<%= form_for([:admin, @inquiry], url: {action: "create"}) do |f| %>
+  	<%# form_for([:admin, @inquiry], url: {action: "create"}) do |f| %>
      <%= f.label :email, "Enter your email:" %>  <%= f.text_field :email %>
-     <% end %>
+     <%# end %>
     </div>
   
   
-<% end %>
+<%# end %>
 		</div>
 	</div>
 
@@ -40,7 +40,7 @@
 			<% @categories.each do |category| %>
 			<div class = "signUpCategoryDiv">
 				<h2 class = "signUpCategoryName"> <%= category.name %> </h2>
-        <%= form_for([:admin, @inquiry], url: {action: "create"}) do |f| %>
+        <%# form_for([:admin, @inquiry], url: {action: "create"}) do |f| %>
         <%# category.segments.each do |segment| %>
           <div class="field">
           <%= f.collection_check_boxes(:segment_ids, category.segments, :id, :name) %>
@@ -56,7 +56,7 @@
 
         <%#end%>
         </div>
-     <% end %>
+     <%# end %>
 
 			</div>
 			<% end %>
@@ -66,16 +66,16 @@
 	<div class = "suggestionDiv">
 		<p class = "suggestionInstruction"> Don't see the segment you're looking for? We may still have it. Tell us who you want to reach: </p>
 		<span class = "suggestionInput">
-			<%= form_for([:admin, @inquiry]) do |f| %>
+			<%# form_for([:admin, @inquiry]) do |f| %>
 		<div class="field">
       <%= f.label :suggested, "suggestions" %>   <%= f.text_field :suggested %>
     </div>
-<% end %></span>
+<%# end %></span>
 	</div>
 
 
 	<div class = "segmentConquest">
-    <%= form_for([:admin, @inquiry]) do |f| %>
+    <%#form_for([:admin, @inquiry]) do |f| %>
     <div class="actions">
     <%= f.submit "conquest" %>
   	</div>

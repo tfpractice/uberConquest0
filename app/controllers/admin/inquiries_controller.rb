@@ -24,9 +24,10 @@ class Admin::InquiriesController < ApplicationController
   # POST /admin/inquiries
   # POST /admin/inquiries.json
   def create
+    logger.info(params)
     @inquiry = Inquiry.new(inquiry_params)
     ###added post-railscast
-    @inquiry.segments.build
+    #@inquiry.segments.build
 
 
     respond_to do |format|

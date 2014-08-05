@@ -20,6 +20,7 @@ before_action :set_inquiry, only: [:show, :edit, :update, :destroy]
   end
 
   def signup
+    Rails.logger.info(params)
       @inquiry = Inquiry.new
           ###added post-railscast
 
