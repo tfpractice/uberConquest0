@@ -23,7 +23,7 @@ before_action :set_inquiry, only: [:show, :edit, :update, :destroy]
       @inquiry = Inquiry.new
           ###added post-railscast
 
-      @inquiry.segments.build
+      #@inquiry.segments.build
       
       #render "inquiries/new"
   end
@@ -52,6 +52,6 @@ before_action :set_inquiry, only: [:show, :edit, :update, :destroy]
     end
 
     def inquiry_params
-      params.require(:inquiry).permit(:email, :suggested)
+      params.require(:inquiry).permit(:email, :suggested, segment_ids:[])
     end
 end

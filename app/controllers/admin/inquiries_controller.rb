@@ -4,7 +4,7 @@ class Admin::InquiriesController < ApplicationController
   # GET /admin/inquiries
   # GET /admin/inquiries.json
   def index
-    @inquiries = Inquiry.all
+    @inquiries = Inquiry.includes(:segemnts).all
   end
 
   # GET /admin/inquiries/1
@@ -75,6 +75,6 @@ class Admin::InquiriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def inquiry_params
-      params.require(:inquiry).permit(:email, :suggested)
+      params.require(:inquiry).permit(:email, :suggested, segment_ids:[])
     end
 end

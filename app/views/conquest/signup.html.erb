@@ -41,16 +41,21 @@
 			<div class = "signUpCategoryDiv">
 				<h2 class = "signUpCategoryName"> <%= category.name %> </h2>
         <%= form_for([:admin, @inquiry], url: {action: "create"}) do |f| %>
-        <% category.segments.each do |segment| %>
-        <%# f.fields_for :segments do |iSegment| %>
+        <%# category.segments.each do |segment| %>
+          <div class="field">
+          <%= f.collection_check_boxes(:segment_ids, category.segments, :id, :name) %>
+
+        <%# f.fields_for :segments.find_or_initialize_by(inquiry: inquiry) do |iSegment| %>
         <%# iSegment.label :segments, "#{segment.name}" %>  
         <%# iSegment.check_box :name %>
         <%#end %>
         <%# @inquiry.segments.build %>
              <%# f.label :segments, "#{segment.name}" %> 
-              <%= f.check_box :segments %>
+              <%# f.check_box :segment_id %>
+          
 
-        <%end%>
+        <%#end%>
+        </div>
      <% end %>
 
 			</div>
