@@ -7,10 +7,10 @@
       <h2 class = "segmentInstanceName">
         <%= @segment.name %>
       </h2>
-      <p class="sengmentInstanceGeofences">
+      <p class="segmentInstanceGeofences">
            <%= "#{@segment.geofenceCount }" + "geo-fenced locations" %>
       </p>
-      <p class="segmentInstanceConquest">
+      <p class="segmentInstanceConquests">
           <%= "#{@segment.conquestCount}" + "conquestable visitors per month" %>
       </p>
   </div>
@@ -42,7 +42,8 @@
 
   <div class = "segmentConquest">
     <span class = "conquestButton" id = "segmentConquestHeaderButton">
-    <a href="/conquest/signup" class="fancybox fancybox.ajax">
+
+    <a href="/conquest/signup" id = "segmentConquestLink">
       <h1 class = "buttonText">Conquest Now <%= image_tag "buttonIcon.png", class: "buttonIcon" %>
         </h1>
     </a>

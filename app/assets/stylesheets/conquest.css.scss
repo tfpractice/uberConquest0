@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "sass/screen";
 
+
 body{
 	margin: 0px;
 }
@@ -89,12 +90,251 @@ h3,p{
 	}
 }
 
+///////// segmentsStart
+
+.appContainer{
+	 @include container;
+  	//@include susy-grid-background;
+  	
+}
+#segmentSection{
+	#segmentContainer{
+	//@include susy-grid-background;
+	padding-top: 1rem;
+	padding-bottom: 3rem;
+
+	#segmentHeader{
+
+		color: #666666;
+		text-align: center;
+	}
+
+	
+	.categoryDiv{
+		@include columns(3.5);
+		min-height: 10rem;
+		border-radius: 5px;
+		background-color: #ffffff;
+		box-shadow: 5px 5px 10px #888888;
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+		color: #3184b3;
+		padding-left: 1rem;
+		padding-right: 1rem;
+
+
+		.categoryName{
+			font-size: 1rem;
+
+		}
+		.segmentList{
+			list-style: none;
+			padding-left: 0rem;
+
+			.segmentItem{
+				border-bottom: 1px solid #aaaaaa;
+
+				.segmentName{
+					font-size: 0.8rem;
+				
+	
+					.segmentCount{
+					float: right;
+					color: #cfca14;
+
+					}
+				}
+			}
+		}
+
+		
+	}
+}
+
+}
+
+.segmentInstanceContainer{
+	@include container;
+	.segmentInstanceHeader{
+		text-align: center;
+		color: #3184b3;
+		border-bottom: 1px solid #aaaaaa;
+		.segmentInstanceName{
+
+		}
+		.segmentInstanceGeofences{
+
+		}
+		.segmentInstanceConquests{
+
+		}
+
+	}
+	.segmentInstanceLocationContainer{
+		.segmentInstanceLocationHeader{
+			text-align: center;
+		}
+	}
+	.segmentInstanceInfoContainer{
+		@include container;
+		border-bottom: 1px solid #aaaaaa;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-bottom: 2rem;
+		margin-bottom: 1rem;
+		.segmentInstanceLocation1{
+
+		}
+		.segmentInstanceInfoList{
+			@include columns(5);
+
+			.segmentInstanceListItem{
+				border-bottom: 1px solid #aaaaaa;
+				margin-top: 0.5rem;
+				padding-bottom: 0.5rem;
+
+				.segmentInstanceListIcon{
+	
+				}
+	
+				#segmentInstanceLocation2{
+	
+				}
+				#segmentInstanceDMA{
+	
+				}
+				#segmentInstanceDeviceCount{
+	
+				}
+			}
+		}
+		.segmentInstanceImageContainer{
+			@include columns(5);
+			@include omega;
+			.segmentInstanceImage{
+				float: right;
+
+			}
+		}
+	}
+
+	.segmentConquest{
+		@include columns(12);
+		.conquestButton{
+			float: right;
+
+			.buttonText{
+
+		}
+			.buttonIcon{
+			
+
+		}
+
+		}
+		
+	}
+}
+
+
+
+.conquestPlannerContainer{
+	 @include container;
+	 .conquestPlannerHeaderDiv{
+		color: #3184b3;
+		text-align: center;
+		border-bottom: 1px solid #aaaaaa;
+		padding-bottom: 1rem;
+	 	.conquestPlannerHeader{
+	 	margin-bottom: 0.5rem;
+	 	font-size: 2rem;
+	 	
+	 }
+	 	.conquestPlannerHeaderSub{
+	  	margin-top: 0.5rem;
+	  	font-weight: normal;
+
+
+	 	}
+	 }
+
+	 .segmentSelectorSection{
+	 	@include container;
+	 	// @include susy-grid-background;
+	 	background-color: #f8f8f8;
+	 	margin-bottom: 2rem;
+	 	
+
+	 	.selectableSegments{
+	 		.signUpCategoryDiv{
+	 			padding: 0.5rem;
+	 			min-height: 10rem;
+
+	 			@include columns(2.7);
+	 			width: columns(2.7);
+	 			//clear: none;
+	 			background-color: #ffffff;
+	 			border: 1px solid #aaaaaa;
+	 			border-radius: 5px;
+	 			margin-bottom: 1rem;
+	 			.signUpCategoryName{
+	 				font-size: 1rem;
+
+
+	 			}
+	 			.signUpSegmentList{
+	 				list-style-type: none;
+	 				padding-left: 0rem;
+	 				.signUpSegmentName{
+	 					font-size: 0.8rem;
+	 				}
+
+	 			}
+	 		}
+	 	}
+	 }
+	 .suggestionDiv{
+	 	border-top: 1px solid #aaaaaa;
+	 	border-bottom: 1px solid #aaaaaa;
+	 	margin-bottom: 2rem;
+	 	padding-bottom: 1rem;
+
+
+	 	.suggestionInstruction{
+
+	 	}
+	 	.suggestionInput{
+
+	 	}
+	 }
+
+	 .actions{
+	 	float: right;
+	 }
+
+}
+
+
+
+///////// segmentsEnd
+
 
 
 #footerDiv{
 	height: 12.5rem;
 	background-color: #133b55;
 	padding-bottom: 2rem;
+	//.footerFloat{
+		.footerText{
+		.command{
+					font-size: 1rem;
+
+					color: #ffffff;
+
+		}
+		
+	}
+	//}
 
 
 

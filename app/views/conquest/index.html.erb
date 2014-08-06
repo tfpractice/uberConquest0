@@ -56,7 +56,7 @@
 				background-size:	contain,contain;
 				background-repeat: no-repeat; " do -%>
 			<h2 class = "categoryName"> <%= category.name %> </h2>
-			<% category.segments.each do |segment| %>
+			<% category.segments.find_each(batch_size: 5) do |segment| %>
 				<ul class = "segmentList">
 					<li class = "segmentItem"> 
 						<p class = "segmentName">
@@ -79,14 +79,20 @@
 	<div class = "appContainer" id = "footerContainer">
 		
 		<%= image_tag "city.png", id: "cityImage" %>
+		
+		<div class = "footerText">
+		<h1 class = "command"> Start reaching new customers </h1>
+		</div>
 		<span class = "conquestButton" id = "footerButton">
+		
 		<a href="/conquest/signup" class="fancybox fancybox.iframe">
 			
-				 <h1 class = "buttonText">Conquest Now</h1> 
-				 <h1 class = "buttonText">choose a segment</h1> 
-				 <%= image_tag "buttonIcon.png", class: "buttonIcon" %>
+				 <h1 class = "buttonText">Conquest Now <%= image_tag "buttonIcon.png", class: "buttonIcon" %> </h1> 
+				 <%#<h1 class = "buttonText">choose a segment</h1> %>
+				 <%# image_tag "buttonIcon.png", class: "buttonIcon" %>
 			
 		 </a>
 		  </span>
+		  
 	</div>
 </div>

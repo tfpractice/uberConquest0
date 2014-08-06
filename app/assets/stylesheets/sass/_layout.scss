@@ -7,7 +7,7 @@
 @import "responsiveBreakpoints";
 
 
-
+/*
 .appContainer{
 	 @include container;
   	//@include susy-grid-background;
@@ -186,6 +186,8 @@
 	 			min-height: 10rem;
 
 	 			@include columns(2.7);
+	 			width: columns(2.7);
+	 			clear: none;
 	 			background-color: #ffffff;
 	 			border: 1px solid #aaaaaa;
 	 			border-radius: 5px;
@@ -226,7 +228,7 @@
 	 }
 
 }
-
+*/
 
 
 

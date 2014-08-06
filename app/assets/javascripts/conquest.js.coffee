@@ -6,10 +6,21 @@ $ ->
 
 	$('#headerNav').scrollToFixed()
 	odometer = $(".odometer")
+	odometer.text(682682682)
 	oValue = odometer.text()
-	odometer.text("682682682")
-	odometer.click ->
-#		oValue = odometer.text()
-		updatedValue = (oValue + 15000)
-		console.log
+
+	setInterval ->
+		increaseOdometer(1500)
+		3000
+
+	increaseOdometer =(changeAmt) ->
+		updatedValue = (parseInt(oValue) + changeAmt)
+		console.log(updatedValue)
 		odometer.text(updatedValue)
+
+	
+
+
+	
+
+	

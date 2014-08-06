@@ -1,11 +1,12 @@
 class ConquestController < ApplicationController
 before_action :set_category, :set_segment
-before_action :set_inquiry, only: [:show, :edit, :update, :destroy]
+#before_action :set_inquiry, only: [:show, :edit, :update, :destroy]
 
 
   def index
   	@categories = Category.includes(:segments).all
   	@segments = Segment.includes(:categories).all
+    @batchedSegments = Segment.find_each(batch_size: 5)
 
 
   end
