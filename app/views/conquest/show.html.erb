@@ -8,31 +8,33 @@
         <%= @segment.name %>
       </h2>
       <p class="segmentInstanceGeofences">
-           <%= "#{@segment.geofenceCount }" + "geo-fenced locations" %>
+           <%= "#{@segment.geofenceCount }" + " geo-fenced locations" %>
       </p>
       <p class="segmentInstanceConquests">
-          <%= "#{@segment.conquestCount}" + "conquestable visitors per month" %>
+          <%= "#{@segment.conquestCount}" + " conquestable visitors per month" %>
       </p>
   </div>
 
   <div class="segmentInstanceLocationContainer">
     <p class="segmentInstanceLocationHeader">
-        <%= @segment.location %>
+        sample location 
     </p>
   </div>
 
   <div class = "segmentInstanceInfoContainer">
-    <p class = "segmentInstanceLocation1">  <strong><%= @segment.location %></strong> </p>
+    <p class = "segmentInstanceLocation1">  <strong><%= @segment.location%></strong> </p>
     <ul class= "segmentInstanceInfoList">
       <li class = "segmentInstanceListItem segmentInstanceLocation2">
         <%= image_tag "pinIcon.png", class: "segmentInstanceListIcon" %>  
-        <%= @segment.location %>
+        <span class = "segmentListText"><%= @segment.location %></span>
       </li>
       <li class = "segmentInstanceListItem" id= "segmentInstanceDMA">
-       <%= image_tag "dmaIcon.png", class: "segmentInstanceListIcon" %>  <%= @segment.dma %>
+       <%= image_tag "dmaIcon.png", class: "segmentInstanceListIcon" %>  
+        <span class = "segmentListText"><%=@segment.dma %></span>
       </li>
        <li class = "segmentInstanceListItem" id=  "segmentInstanceDeviceCount">
-       <%= image_tag "phoneIcon.png", class: "segmentInstanceListIcon" %>  <%= "#{@segment.deviceCount}" + "/month" %>
+       <%= image_tag "phoneIcon.png", class: "segmentInstanceListIcon" %>  
+       <span class = "segmentListText"><%= "#{@segment.deviceCount}" + "/month" %></span>
       </li>
     </ul>
      <div class= "segmentInstanceImageContainer"> 

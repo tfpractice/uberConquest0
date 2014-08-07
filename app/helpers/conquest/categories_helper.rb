@@ -1,0 +1,2 @@
+module Conquest::CategoriesHelper
+end

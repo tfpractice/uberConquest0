@@ -1,11 +1,23 @@
 Rails.application.routes.draw do
 
 
+  namespace :conquest do
+  get 'categories/show'
+  end
+
+  namespace :conquest do
+  get 'categories/index'
+  end
+
     resources :categories, only: [:index, :show], controller: 'conquest'
     resources :segments, only: [:index, :show], controller: 'conquest'
     resources :inquiries, only: [:new, :create], controller: 'conquest'
 
+ namespace :conquest do
+    resources :categories, only: [:index, :show]
+  end
     
+    get 'conquest/categories/show'
   get 'conquest/index'
 
   get 'conquest/show'

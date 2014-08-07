@@ -220,7 +220,7 @@ $macbookHorizontal	: 80em;
 	.segmentInstanceHeader{
 		text-align: center;
 		color: #3184b3;
-		border-bottom: 1px solid #aaaaaa;
+				border-bottom: 1px solid #cccccc;
 		.segmentInstanceName{
 			font-size: 1rem;
 		}
@@ -242,7 +242,7 @@ $macbookHorizontal	: 80em;
 	}
 	.segmentInstanceInfoContainer{
 		@include container;
-		border-bottom: 1px solid #aaaaaa;
+				border-bottom: 1px solid #cccccc;
 		padding-left: 1rem;
 		padding-right: 1rem;
 		padding-bottom: 2rem;
@@ -254,7 +254,7 @@ $macbookHorizontal	: 80em;
 			@include columns(12);
 
 			.segmentInstanceListItem{
-				border-bottom: 1px solid #aaaaaa;
+				border-bottom: 1px solid #cccccc;
 				margin-top: 0.5rem;
 				padding-bottom: 0.5rem;
 
@@ -428,7 +428,7 @@ $macbookHorizontal	: 80em;
 	.segmentInstanceHeader{
 		text-align: center;
 		color: #3184b3;
-		border-bottom: 1px solid #aaaaaa;
+		border-bottom: 1px solid #cccccc;
 		.segmentInstanceName{
 			font-size: 2rem;
 		}
@@ -448,7 +448,7 @@ $macbookHorizontal	: 80em;
 	}
 	.segmentInstanceInfoContainer{
 		@include container;
-		border-bottom: 1px solid #aaaaaa;
+		border-bottom: 1px solid #cccccc;
 		padding-left: 1rem;
 		padding-right: 1rem;
 		padding-bottom: 2rem;
@@ -460,7 +460,7 @@ $macbookHorizontal	: 80em;
 			@include columns(5);
 
 			.segmentInstanceListItem{
-				border-bottom: 1px solid #aaaaaa;
+				border-bottom: 1px solid #cccccc;
 				margin-top: 0.5rem;
 				padding-bottom: 0.5rem;
 

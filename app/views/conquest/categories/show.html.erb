@@ -1,0 +1,16 @@
+
+<% category = Category.find(params[:id]) %>
+
+<% category.segments.each do |segment| %>
+				<ul class = "segmentList">
+					<li class = "segmentItem"> 
+						<p class = "segmentName">
+							<%= link_to "#{segment.name}", segment_path(segment), class: "fancybox fancybox.iframe" %>
+							<span class = "segmentCount"> <%= segment.conquestCount %> </span>
+						</p> 
+					</li>
+					
+				</ul>
+			<% end %>
+
+<p>hello</p>

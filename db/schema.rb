@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140728013843) do
+ActiveRecord::Schema.define(version: 20140807221038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,11 +41,11 @@ ActiveRecord::Schema.define(version: 20140728013843) do
 
   create_table "segments", force: true do |t|
     t.string   "name"
-    t.integer  "geofenceCount"
-    t.integer  "conquestCount"
+    t.integer  "geofenceCount",      limit: 8
+    t.integer  "conquestCount",      limit: 8
     t.string   "location"
     t.string   "dma"
-    t.integer  "deviceCount"
+    t.integer  "deviceCount",        limit: 8
     t.string   "imageFilepath"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -136,6 +136,10 @@ h3,p{
 
 				.segmentName{
 					font-size: 0.8rem;
+					a{
+						text-decoration: none;
+
+					}
 				
 	
 					.segmentCount{
@@ -144,6 +148,12 @@ h3,p{
 
 					}
 				}
+			}
+		}
+		.categoryLink{
+			float: right;
+			a{
+				text-decoration: none;
 			}
 		}
 
@@ -158,7 +168,7 @@ h3,p{
 	.segmentInstanceHeader{
 		text-align: center;
 		color: #3184b3;
-		border-bottom: 1px solid #aaaaaa;
+		border-bottom: 1px solid #eeeeee;
 		.segmentInstanceName{
 
 		}
@@ -177,7 +187,7 @@ h3,p{
 	}
 	.segmentInstanceInfoContainer{
 		@include container;
-		border-bottom: 1px solid #aaaaaa;
+		border-bottom: 1px solid #eeeeee;
 		padding-left: 1rem;
 		padding-right: 1rem;
 		padding-bottom: 2rem;
@@ -187,11 +197,16 @@ h3,p{
 		}
 		.segmentInstanceInfoList{
 			@include columns(5);
+			list-style-type: none;
 
 			.segmentInstanceListItem{
-				border-bottom: 1px solid #aaaaaa;
+				border-bottom: 1px solid #eeeeee;
 				margin-top: 0.5rem;
 				padding-bottom: 0.5rem;
+				.segmentListText{
+					margin-left: 2rem;
+					
+				}
 
 				.segmentInstanceListIcon{
 	
@@ -222,6 +237,10 @@ h3,p{
 		@include columns(12);
 		.conquestButton{
 			float: right;
+			a{
+				text-decoration: none;
+
+					}
 
 			.buttonText{
 

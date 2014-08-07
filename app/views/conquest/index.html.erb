@@ -56,6 +56,8 @@
 				background-size:	contain,contain;
 				background-repeat: no-repeat; " do -%>
 			<h2 class = "categoryName"> <%= category.name %> </h2>
+
+
 			<% category.segments.find_each(batch_size: 5) do |segment| %>
 				<ul class = "segmentList">
 					<li class = "segmentItem"> 
@@ -66,11 +68,15 @@
 					</li>
 					
 				</ul>
+
+			<% end %>
+			<% if category.segments.size > 0 %>
+			<%= link_to "more", conquest_category_path(category), class: "categoryLink fancybox fancybox.iframe" %>
 			<% end %>
 			
 		<% end -%>
-	
-		<% end %>
+
+			<% end %>
 	</div>
 
 </section>
