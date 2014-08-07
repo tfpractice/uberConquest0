@@ -42,8 +42,12 @@
 				<h2 class = "signUpCategoryName"> <%= category.name %> </h2>
         <%# form_for([:admin, @inquiry], url: {action: "create"}) do |f| %>
         <%# category.segments.each do |segment| %>
-          <div class="field">
-          <%= f.collection_check_boxes(:segment_ids, category.segments, :id, :name) %>
+          <div class="field" class= "signUpEntry">
+          <%= f.collection_check_boxes(:segment_ids, category.segments, :id, :name)  do |entry| %>
+           <%= entry.check_box(class: "entryCheckBox") %>
+          <%= entry.label(class: "signUpEntry")%>
+
+          <%end%>
 
         <%# f.fields_for :segments.find_or_initialize_by(inquiry: inquiry) do |iSegment| %>
         <%# iSegment.label :segments, "#{segment.name}" %>  
@@ -64,20 +68,21 @@
 	</div>
 
 	<div class = "suggestionDiv">
-		<p class = "suggestionInstruction"> Don't see the segment you're looking for? We may still have it. Tell us who you want to reach: </p>
-		<span class = "suggestionInput">
-			<%# form_for([:admin, @inquiry]) do |f| %>
-		<div class="field">
-      <%= f.label :suggested, "suggestions" %>   <%= f.text_field :suggested %>
+		<div class = "instructionHolder">
+      <p class = "suggestionInstruction"> Don't see the segment you're looking for? We may still have it. Tell us who you want to reach: </p>
     </div>
-<%# end %></span>
+    <div class="field" id = "suggestionField">
+		<span class = "suggestionInput" >
+      <%# f.label :suggested, "suggestions" %>   <%= f.text_field :suggested, class: "suggestionText" %>
+  </span>
+   </div>
 	</div>
 
 
 	<div class = "segmentConquest">
     <%#form_for([:admin, @inquiry]) do |f| %>
     <div class="actions">
-    <%= f.submit "conquest" %>
+    <%= f.submit "submit request", class: "submitButton" %>
   	</div>
 
    <!-- <a href="/conquest/signup" class="fancybox fancybox.ajax">

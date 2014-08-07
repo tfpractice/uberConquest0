@@ -287,10 +287,18 @@ h3,p{
 	 				padding-left: 0rem;
 	 				.signUpSegmentName{
 	 					font-size: 0.8rem;
+
 	 				}
 
 	 			}
 	 		}
+	 		.signUpEntry{
+	 			font-size: 0.75rem;
+	 			color: #888888;
+	 			font-family: $contentFont;
+
+	 		}
+
 	 	}
 	 }
 	 .suggestionDiv{
@@ -298,18 +306,61 @@ h3,p{
 	 	border-bottom: 1px solid #aaaaaa;
 	 	margin-bottom: 2rem;
 	 	padding-bottom: 1rem;
+	 	@include container;
 
+
+		.instructionHolder{
+			@include columns(7);
+			//width: columns(4);
 
 	 	.suggestionInstruction{
+	 		//@include columns(4);
+			//width: columns(4);
+	 		
 
 	 	}
-	 	.suggestionInput{
+	 }
+	 	#suggestionField{
+	 		@include columns(5);
+	 		@include omega;
+	 		font-family: $contentFont;
+	 		margin-top: 2rem;
 
-	 	}
+	 		.suggestionInput{
+
+	 		 		//margin-top: 2rem;
+					font-size: 1rem;
+					.suggestionText{
+						clear: right;
+						height: 2rem;
+						width: 100%;
+						border: 1px solid #cccccc;
+						border-radius: 5px;
+					}
+
+	 		 	}
+	 		 }
 	 }
 
 	 .actions{
 	 	float: right;
+	 	.submitButton{
+	 		@include columns(12);
+			 border-radius: 5px;
+			background-color: #ff0000;
+			//width: 75%;
+			border: none;
+
+			font-size: 1rem;
+			text-align: center;
+			color: #ffffff;
+			padding-bottom: 0.5rem;
+			padding-top: 0.5rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
+
+	 	}
+
 	 }
 
 }
@@ -324,27 +375,33 @@ h3,p{
 	height: 12.5rem;
 	background-color: #133b55;
 	padding-bottom: 2rem;
-	//.footerFloat{
-		.footerText{
-		.command{
-					font-size: 1rem;
-
-					color: #ffffff;
-
-		}
-		
-	}
-	//}
-
-
-
+	
 	#cityImage{
 	@include columns(4);
-}
-
-	#footerButton{
-		float: right;
 	}
+.footerFloat{
+		float: right;
+		.command{
+			font-size: 1.5rem;
+			font-weight: 400;
+			text-align: right;
+			margin-right: 0.25rem;
+			color: #ffffff;
+
+		}
+
+		#footerButton{
+		//float: right;
+			width: 75%;
+		}
+		 .copyright{
+		 	@include omega;
+		 	color: #cccccc;
+		 	margin-top: 5rem;
+
+		 }
+	}
+	
 }
 
 
