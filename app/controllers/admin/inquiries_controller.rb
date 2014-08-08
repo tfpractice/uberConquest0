@@ -34,7 +34,7 @@ class Admin::InquiriesController < ApplicationController
       if @inquiry.save
         #format.html { redirect_to [:admin, @inquiry], notice: 'Inquiry was successfully created.' }
         #format.json { render action: 'show', status: :created, location: @inquiry }
-        format.html { redirect_to root_url, notice: 'Inquiry was successfully created.' }
+        format.html { redirect_to :controller => '/conquest', :action => 'success'}
         format.json { render action: 'show', status: :created, location: @inquiry }
       else
         format.html { render action: 'new' }

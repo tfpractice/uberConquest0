@@ -17,12 +17,15 @@ Rails.application.routes.draw do
     resources :categories, only: [:index, :show]
   end
     
-    get 'conquest/categories/show'
+  get 'conquest/categories/show'
+  
   get 'conquest/index'
 
   get 'conquest/show'
 
   get 'conquest/signup'
+
+  get 'conquest/success'
 
   namespace :admin do
     resources :inquiries

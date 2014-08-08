@@ -9,9 +9,12 @@ $ ->
 	odometer.text(682682682)
 	oValue = odometer.text()
 
-	setInterval ->
-		increaseOdometer(1500)
-		3000
+	#setInterval ->
+	#	increaseOdometer(1500)
+	#	3000
+
+	setInterval (-> increaseOdometer 1500), 3000
+	
 
 	increaseOdometer =(changeAmt) ->
 		updatedValue = (parseInt(oValue) + changeAmt)
