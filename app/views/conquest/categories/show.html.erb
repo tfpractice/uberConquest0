@@ -1,6 +1,8 @@
 
 <% category = Category.find(params[:id]) %>
+<div class = "showCategoryContainer">
 
+	<h2 class = "categoryName"> <%= category.name %> </h2>
 <% category.segments.each do |segment| %>
 				<ul class = "segmentList">
 					<li class = "segmentItem"> 
@@ -13,5 +15,4 @@
 					
 				</ul>
 			<% end %>
-
-<p>hello</p>
+</div>

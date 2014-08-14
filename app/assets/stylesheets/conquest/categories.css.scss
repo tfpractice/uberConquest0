@@ -1,3 +1,23 @@
 // Place all the styles related to the conquest/categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.showCategoryContainer{
+
+	color: #3184b3;
+
+	.segmentList {
+		list-style-type: none;
+		.segmentItem{
+			border-bottom: 1px solid #cccccc;
+			a{
+				text-decoration: none;
+			}
+			.segmentCount{
+				color: #cfca14;
+				float: right;
+			}
+		}
+	}
+}

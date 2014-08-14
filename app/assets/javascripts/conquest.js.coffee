@@ -16,7 +16,7 @@ $ ->
 	setInterval (-> increaseOdometer 1500), 3000
 	
 
-	increaseOdometer =(changeAmt) ->
+	increaseOdometer = (changeAmt) ->
 		updatedValue = (parseInt(oValue) + changeAmt)
 		console.log(updatedValue)
 		odometer.text(updatedValue)

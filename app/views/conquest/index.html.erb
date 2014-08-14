@@ -71,7 +71,7 @@
 
 			<% end %>
 			<% if category.segments.size > 0 %>
-			<%= link_to "more", conquest_category_path(category), class: "categoryLink fancybox fancybox.iframe" %>
+			<%= link_to (image_tag "ellipses.png", class: "ellipses"), conquest_category_path(category), class: "categoryLink fancybox fancybox.iframe" %>
 			<% end %>
 			
 		<% end -%>
