@@ -35,7 +35,7 @@
 	<div class = "appContainer" id = "odometerContainer">
 		<div id="odometerHolder">
 			<p class = "odometerText">UberConquest has 
-					<span class = "odometer"></span>
+					<span class = "odometer">682682682</span>
 					mobile phone profiles
 				</p> 
 				<p class = "odometerText"> <b>that allow you to reach precise audiences</b> </p>
@@ -48,9 +48,37 @@
 	<div class = "appContainer" id = "segmentContainer">
 		<h2 id = "segmentHeader"> We have 100,000s  of custom segments </h2>
 
-		
+
+		<% @categories.featured.each do |category| %>
+		<%= content_tag :div, class: "featuredCategoryDiv", 
+		style: "background-image: url('/assets/featuredBackground.png'); 
+				background-size:	cover;
+				background-repeat: no-repeat; " do -%>
+			<%= image_tag "featuredFlag.png", class: "featuredFlag" %>	<h2 class = "featuredCategoryName"> <%= category.name %> </h2>
+
+
+			<% category.segments.find_each(batch_size: 5) do |segment| %>
+				<ul class = "featuredSegmentList">
+					<li class = "featuredSegmentItem"> 
+						<p class = "featuredSegmentName">
+							<%= link_to "#{segment.name}", segment_path(segment), class: "fancybox fancybox.iframe" %>
+							<span class = "featuredSegmentCount"> <%= segment.conquestCount %> </span>
+						</p> 
+					</li>
+					
+				</ul>
+
+			<% end %>
+			<% if category.segments.size > 0 %>
+			<%= link_to (image_tag "ellipses.png", class: "ellipses"), conquest_category_path(category), class: "categoryLink fancybox fancybox.iframe" %>
+			<% end %>
+			
+		<% end -%>
+
+			<% end %>
+
 	
-		<% @categories.each do |category| %>
+		<% @categories.nonFeatured.each do |category| %>
 		<%= content_tag :div, class: "categoryDiv", 
 		style: "background-image: url('#{category.background.url}'); 
 				background-size:	contain,contain;

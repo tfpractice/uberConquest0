@@ -159,6 +159,60 @@ h3,p{
 
 		
 	}
+
+	.featuredCategoryDiv{
+		@include columns(7.5);
+		min-height: 22rem;
+		border-radius: 5px;
+		background-color: #ffffff;
+		box-shadow: 5px 5px 10px #888888;
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+		color: #3184b3;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		//background-size: cover;
+		.featuredFlag{
+			max-width: columns(2);
+		}
+
+
+		.featuredCategoryName{
+			font-size: 1rem;
+
+		}
+		.featuredSegmentList{
+			list-style: none;
+			padding-left: 0rem;
+
+			.featuredSegmentItem{
+				border-bottom: 1px solid #aaaaaa;
+
+				.featuredCSegmentName{
+					font-size: 0.8rem;
+					a{
+						text-decoration: none;
+
+					}
+				
+	
+					.featuredSegmentCount{
+					float: right;
+					color: #cfca14;
+
+					}
+				}
+			}
+		}
+		.categoryLink{
+			float: right;
+			a{
+				text-decoration: none;
+			}
+		}
+
+		
+	}
 }
 
 }

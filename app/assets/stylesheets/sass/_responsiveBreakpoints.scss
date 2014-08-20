@@ -125,7 +125,47 @@ $macbookHorizontal	: 80em;
 			text-align: center;
 		}
 
+	.featuredCategoryDiv{
+			@include columns(10);
+			width: columns(12)!important;
+			clear: both;
+			min-height: 4rem!important;
+			border-radius: 5px;
+			background-color: #ffffff;
+			box-shadow: 5px 5px 10px #888888;
+			margin-bottom: 1rem;
+			margin-top: 1rem;
+			color: #3184b3;
+			padding-left: 1rem;
+			padding-right: 1rem;
 	
+	
+			.categoryName{
+				font-size: 1rem;
+	
+			}
+			.segmentList{
+				list-style: none;
+				padding-left: 0rem;
+	
+				.segmentItem{
+					border-bottom: 1px solid #aaaaaa;
+	
+					.segmentName{
+						font-size: 0.8rem;
+					
+		
+						.segmentCount{
+						float: right;
+						color: #cfca14;
+	
+						}
+					}
+				}
+		}
+
+		
+		}
 		.categoryDiv{
 			@include columns(10);
 			width: columns(12)!important;
