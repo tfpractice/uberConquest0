@@ -54,7 +54,7 @@
 		style: "background-image: url('/assets/featuredBackground.png'); 
 				background-size:	cover;
 				background-repeat: no-repeat; " do -%>
-			<%= image_tag "featuredFlag.png", class: "featuredFlag" %>	<h2 class = "featuredCategoryName"> <%= category.name %> </h2>
+		<h2 class = "featuredCategoryName">	<%= image_tag "featuredFlag.png", class: "featuredFlag" %>	<strong><%= category.name %></strong> </h2>
 
 
 			<% category.segments.find_each(batch_size: 5) do |segment| %>

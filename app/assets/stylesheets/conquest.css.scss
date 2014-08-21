@@ -168,7 +168,7 @@ h3,p{
 		box-shadow: 5px 5px 10px #888888;
 		margin-bottom: 1rem;
 		margin-top: 1rem;
-		color: #3184b3;
+		color: #ffffff;
 		padding-left: 1rem;
 		padding-right: 1rem;
 		//background-size: cover;
@@ -178,7 +178,14 @@ h3,p{
 
 
 		.featuredCategoryName{
+			margin-top: 0px;
 			font-size: 1rem;
+
+			strong{
+				font-size: 1.5rem;
+				text-align: center;
+				margin-left: 2rem;
+			}
 
 		}
 		.featuredSegmentList{
